@@ -6185,7 +6185,7 @@ public abstract class RecentsView<
         mRecentsAnimationController = null;
         mSplitSelectStateController.setRecentsAnimationRunning(false);
         executeSideTaskLaunchCallback();
-        if (enableOverviewBackgroundWallpaperBlur()) {
+        if (com.android.systemui.shared.system.BlurUtils.supportsBlursOnWindows()) {
             mBlurUtils.setDrawLiveTileBelowRecents(false);
         }
     }
